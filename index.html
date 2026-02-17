@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Portfolio — Bramasta Prayoga</title>
+  <meta name="description" content="Portfolio web — Bramasta Prayoga. Projects, skills, kontak." />
+
+  <style>
+    /* ===== Simple reset & utilities ===== */
+    :root{
+      --bg:#0f1724; /* dark background */
+      --card:#0b1220;
+      --muted:#94a3b8;
+      --accent:#7dd3fc;
+      --glass: rgba(5, 2, 2, 0.03);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html,body{height:100%}
+    body{
+      background: linear-gradient(180deg, #071024 0%, var(--bg) 100%);
+      color:#e6eef8;
+      line-height:1.4;
+      -webkit-font-smoothing:antialiased;
+      padding:24px;
+    }
+    a{color:var(--accent); text-decoration:none}
+    .container{max-width:1100px;margin:0 auto;padding:24px;}
+    header{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:28px}
+    .logo{display:flex;align-items:center;gap:12px}
+    .logo .mark{width:48px;height:48px;background:var(--glass);display:flex;align-items:center;justify-content:center;border-radius:10px;font-weight:700;color:var(--accent)}
+    nav a{margin-left:14px;color:var(--muted);font-weight:600}
+    /* Hero */
+    .hero{display:grid;grid-template-columns:1fr 320px;gap:28px;align-items:center;margin-bottom:28px}
+    .hero .intro h1{font-size:28px;margin-bottom:8px}
+    .hero .intro p{color:var(--muted);margin-bottom:16px}
+    .btn{
+      display:inline-block;padding:10px 14px;border-radius:10px;background:linear-gradient(90deg,var(--accent),#60a5fa);
+      color:#021024;font-weight:700;box-shadow:0 6px 18px rgba(125,211,252,0.08);
+    }
+    .card{
+      background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border-radius:14px;padding:16px;box-shadow:0 6px 20px rgba(2,6,23,0.6);
+    }
+    .profile-pic{
+      width:100%;height:320px;border-radius:12px;background:linear-gradient(180deg,#102035,#071020);display:flex;align-items:center;justify-content:center;color:var(--muted);
+      font-size:14px
+    }
+    /* Projects */
+    .projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:18px}
+    .project{padding:14px;border-radius:12px;background:var(--card);border:1px solid rgba(255,255,255,0.03)}
+    .project h3{margin-bottom:8px;font-size:16px}
+    .project p{color:var(--muted);font-size:13px;margin-bottom:12px}
+    .tags{display:flex;gap:8px;flex-wrap:wrap}
+    .tag{font-size:12px;padding:6px 8px;border-radius:999px;background:rgba(255,255,255,0.02);color:var(--muted)}
+    /* Skills */
+    .skills{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:18px}
+    .skill{background:rgba(255,255,255,0.02);padding:10px;border-radius:10px}
+    .skill .bar{height:10px;background:rgba(255,255,255,0.04);border-radius:8px;margin-top:8px}
+    .skill .bar > i{display:block;height:100%;border-radius:8px;background:linear-gradient(90deg,var(--accent),#60a5fa)}
+    /* Contact */
+    form{display:grid;gap:10px}
+    input,textarea{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:10px;border-radius:8px;color:inherit}
+    textarea{min-height:120px;resize:vertical}
+    footer{margin-top:28px;text-align:center;color:var(--muted);font-size:13px}
+    /* Responsive */
+    @media (max-width:880px){
+      .hero{grid-template-columns:1fr;grid-auto-rows:auto}
+      .hero .profile-pic{height:260px}
+      .skills{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">
+        <div class="mark">BP</div>
+        <div>
+          <div style="font-weight:700">Bramasta Prayoga</div>
+          <div style="font-size:12px;color:var(--muted)">Quality Control • Welding • Operator Produksi</div>
+        </div>
+      </div>
+
+      <nav>
+        <a href="#projects">Pengalaman</a>
+        <a href="#skills">Skills</a>
+        <a href="#about">Tentang</a>
+        <a href="#contact">Kontak</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="intro">
+        <h1>Perkenalkan Saya Bramasta Prayoga.</h1>
+        <p>Saya berpengalaman di Quality Control, Welding, & Operator Produksi. Scroll ke bawah untuk lihat pengalaman saya.</p>
+        <div style="display:flex;gap:12px">
+          <a class="btn" href="#projects">Lihat Pengalaman</a>
+          <a style="align-self:center;color:var(--muted)" href="#contact">Atau kontak saya</a>
+        </div>
+
+        <div id="about" style="margin-top:18px" class="card">
+          <strong>Ringkasan</strong>
+          <p style="color:var(--muted);margin-top:8px">Saya adalah seorang pekerja yang dapat di tempatkan di posisi yang di butuhkan oleh perusahaan, dan sangat terbuka untuk pengalaman baru.</p>
+        </div>
+      </div>
+
+      <div class="card">
+       <div class="profile-pic">
+  <img src="your-photo.jpg" style="width:100%;height:100%;object-fit:cover;border-radius:12px;">
+</div>
+
+        <div style="display:flex;gap:8px;margin-top:12px;align-items:center;justify-content:space-between">
+          <div>
+            <div style="font-weight:700">Bramasta Prayoga</div>
+            <div style="font-size:13px;color:var(--muted)">Bandung, Indonesia</div>
+          </div>
+          <div style="text-align:right">
+            <div style="font-size:12px;color:var(--muted)">Open to work</div>
+            <div style="font-weight:700;margin-top:6px">Availability</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2 style="margin-bottom:12px">Pengalaman</h2>
+      <div class="projects">
+        <div class="project card">
+          <h3>Pengalaman 1</h3>
+          <p>CV Pudak Scientific :</p>
+          <p>Quality Control (IQC, IPQC, OQC).</p>
+          <div class="tags">
+            <span class="tag">2019</span>
+            <span class="tag">Sampai</span>
+            <span class="tag">2022</span>
+          </div>
+          <div style="margin-top:12px"><a href="#" target="_blank">Lihat Selengkapnya</a> • <a href="#" target="_blank"></a></div>
+        </div>
+
+        <div class="project card">
+          <h3>Pengalaman 2</h3>
+          <p>CV Pudak Scientific :</p>
+          <p>Welding (SMAW, GMAW, GTAW).</p>
+          <div class="tags">
+            <span class="tag">2022</span>
+            <span class="tag">Sampai</span>
+            <span class="tag">2025</span>
+          </div>
+          <div style="margin-top:12px"><a href="#" target="_blank">Lihat Selengkapnya</a> • <a href="#" target="_blank"></a></div>
+        </div>
+
+        <div class="project card">
+           <h3>Pengalaman 3</h3>
+          <p>PT Pindad Enjiniring :</p>
+          <p>Operator Produksi</p>
+          <p>Welding, Bubut, Milling, Deburing, & Assembling.</p>
+          <div class="tags">
+            <span class="tag">2017</span>
+            <span class="tag">Sampai</span>
+            <span class="tag">2019</span>
+          </div>
+          <div style="margin-top:12px"><a href="#" target="_blank">Lihat Selengkapnya</a> • <a href="#" target="_blank"></a></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <h2 style="margin-top:18px;margin-bottom:12px">Skills</h2>
+      <div class="skills">
+        <div class="skill card">
+          <strong>Quality Control</strong>
+          <div style="color:var(--muted);font-size:13px;margin-top:6px">IQC • IPQC • OQC</div>
+          <div class="bar" style="margin-top:10px"><i style="width:85%"></i></div>
+        </div>
+
+        <div class="skill card">
+          <strong>Welding</strong>
+          <div style="color:var(--muted);font-size:13px;margin-top:6px">SMAW • GTAW • GMAW</div>
+          <div class="bar" style="margin-top:10px"><i style="width:60%"></i></div>
+        </div>
+
+        <div class="skill card">
+          <strong>Operator Produksi</strong>
+          <div style="color:var(--muted);font-size:13px;margin-top:6px">Bubut • Milling • Welding • Deburing • Assembling</div>
+          <div class="bar" style="margin-top:10px"><i style="width:70%"></i></div>
+        </div>
+
+        <div class="skill card">
+          <strong>Vibe Coding</strong>
+          <div style="color:var(--muted);font-size:13px;margin-top:6px">VS Code • GitHub</div>
+          <div class="bar" style="margin-top:10px"><i style="width:50%"></i></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" style="margin-top:18px">
+      <h2>Kontak</h2>
+      <div style="display:grid;grid-template-columns:1fr 360px;gap:16px;margin-top:12px">
+        <div class="card">
+          <form onsubmit="sendMail(event)">
+            <input id="name" placeholder="Nama" required />
+            <input id="email" type="email" placeholder="Email" required />
+            <textarea id="message" placeholder="Pesan" required></textarea>
+            <button class="btn" type="submit" style="margin-top:6px">Kirim</button>
+          </form>
+        </div>
+
+        <div class="card">
+          <strong>Info</strong>
+          <p style="color:var(--muted);margin-top:8px">Email: <a href="mailto:youremail@example.com">bramastaprayoga28@gmail.com</a></p>
+          <p style="color:var(--muted)">LinkedIn: <a href="#">linkedin.com/in/bramastaprayoga</a></p>
+          <p style="color:var(--muted)">Telephone: <a href="#">+6289625595005</a></p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      © <span id="year"></span> Bramasta Prayoga
+    </footer>
+  </div>
+
+  <script>
+    // small helpers
+    document.getElementById('year').innerText = new Date().getFullYear();
+
+    function sendMail(e){
+      e.preventDefault();
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const message = document.getElementById('message').value;
+      // simple mailto fallback
+      const subject = encodeURIComponent('Portfolio contact from ' + name);
+      const body = encodeURIComponent('Nama: ' + name + '\\nEmail: ' + email + '\\n\\n' + message);
+      window.location.href = 'mailto:youremail@example.com?subject=' + subject + '&body=' + body;
+    }
+  </script>
+</body>
+</html>
